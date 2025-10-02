@@ -52,6 +52,41 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+    <tr onmouseout="gcm_stop()" onmouseover="gcm_start()" bgcolor="#ffffd0">
+      <td style="padding:16px;width:20%;vertical-align:top">
+        <div class="top">
+          <img src='images/GCMFig1.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function gcm_start() {
+            document.getElementById('gcm_image').style.opacity = "1";
+          }
+          function gcm_stop() {
+            document.getElementById('gcm_image').style.opacity = "0";
+          }
+          gcm_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:top">
+        <a href="https://arxiv.org/abs/2509.24988">
+          <span class="papertitle">Generalized Correctness Models: Learning Calibrated and Model-Agnostic Predictors from Historical Patterns</span>
+        </a>
+        <br>
+        <strong>Hanqi Xiao</strong>,
+        <a href="https://vaidehi99.github.io/">Vaidehi Patil</a>,
+        <a href="https://amy-hyunji.github.io/">Hyunji Lee</a>,
+        <a href="https://esteng.github.io/">Elias Stengel-Eskin</a>,
+        <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a>
+        <br>
+        <em>arXiv preprint</em>, 2025
+        <br>
+        <a href="https://arxiv.org/abs/2509.24988">Link</a>
+        <p></p>
+        <p>
+          We propose **Generalized Correctness Models (GCMs)** trained on multiple models’ historical correctness data, to yield calibrated, model-agnostic predictors of answer reliability. Unlike prior self-knowledge approaches, GCMs leverage cross-model patterns and outperform individual models’ confidence estimates in selective prediction and calibration tasks.  
+        </p>
+      </td>
+    </tr>
 
     <tr onmouseout="tacq_stop()" onmouseover="tacq_start()" bgcolor="#ffffd0">
       <td style="padding:16px;width:20%;vertical-align:middle">
@@ -85,46 +120,10 @@
         <br>
         <em>COLM</em>, 2025
         <br>
-        <a href="https://arxiv.org/abs/2504.07389">arXiv Link</a>
+        <a href="https://arxiv.org/abs/2504.07389">Link</a>
         <p></p>
         <p>
           Using interpretability informed saliency scores based on task-specific information to localize important weights to preserve during model compression, yielding improvements for both general and task specific quantization</p>
-      </td>
-    </tr>
-
-    <tr onmouseout="gcm_stop()" onmouseover="gcm_start()" bgcolor="#ffffd0">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="top">
-          <img src='images/GCMFig1.png' width="160">
-        </div>
-        <script type="text/javascript">
-          function gcm_start() {
-            document.getElementById('gcm_image').style.opacity = "1";
-          }
-          function gcm_stop() {
-            document.getElementById('gcm_image').style.opacity = "0";
-          }
-          gcm_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2509.24988">
-          <span class="papertitle">Generalized Correctness Models: Learning Calibrated and Model-Agnostic Predictors from Historical Patterns</span>
-        </a>
-        <br>
-        <strong>Hanqi Xiao</strong>,
-        <a href="https://vaidehi99.github.io/">Vaidehi Patil</a>,
-        <a href="https://amy-hyunji.github.io/">Hyunji Lee</a>,
-        <a href="https://esteng.github.io/">Elias Stengel-Eskin</a>,
-        <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a>
-        <br>
-        <em>arXiv preprint</em>, 2025
-        <br>
-        <a href="https://arxiv.org/abs/2509.24988">arXiv Link</a>
-        <p></p>
-        <p>
-          We propose **Generalized Correctness Models (GCMs)** trained on multiple models’ historical correctness data, to yield calibrated, model-agnostic predictors of answer reliability. Unlike prior self-knowledge approaches, GCMs leverage cross-model patterns and outperform individual models’ confidence estimates in selective prediction and calibration tasks.  
-        </p>
       </td>
     </tr>
 
