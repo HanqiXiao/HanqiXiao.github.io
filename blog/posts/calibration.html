@@ -40,7 +40,7 @@
     <p><strong>Q:</strong> So how do we measure calibration? When you ask a language model a question, the model's response to it is fixed?<br>
     <strong>A:</strong> Yes, but it is not a simple instance-level question — we use dataset-level metrics such as <em>Expected Calibration Error (ECE)</em> and <em>Root Mean Squared Calibration Error (RMSCE)</em> to evaluate how well confidence aligns with accuracy across many samples 
     (<a href="https://proceedings.neurips.cc/paper/2017/hash/9ef2ed4b7fd2c810847ffa5fa85bce38-Abstract.html" target="_blank">Guo et al., 2017</a>). 
-    In practice, ECE divides predictions into confidence bins (e.g., 0–10%, 10–20%, …) and measures the difference between the average confidence and the actual accuracy in each bin, then averages those differences. RMSCE does the same but takes the root mean square instead of the absolute difference, making it more sensitive to large miscalibrations. Together, these metrics quantify whether a model that says “I’m 80% confident” is indeed correct about 80% of the time.</p>
+    In practice, ECE divides predictions into confidence bins (e.g., 0–10%, 10–20%, …) and measures the difference between the average confidence and the actual accuracy in each bin, then averages those differences. RMSCE is adaptively binned and takes the root mean square instead of the absolute difference, making it more sensitive to large miscalibrations. Together, these metrics quantify whether a model that says “I’m 80% confident” is indeed correct about 80% of the time.</p>
     </article>
 
     <hr style="margin:40px 0;">
