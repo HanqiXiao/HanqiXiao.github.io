@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>What is Calibration? – Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../stylesheet.css">
+  </head>
+
+  <body style="max-width:800px;margin:auto;padding:20px;line-height:1.6;">
+    <p style="text-align:center;"><a href="../index.html">← Back to Blog</a></p>
+
+    <article>
+      <h1>What is Calibration?</h1>
+      <p>Synopsis: 
+        Even though the concept of confidence calibration seems simple, there are a lot of hidden nuance that can throw you off, and I wanted to share these in a simple way in this short post, structured as a Q and A.
+        After finishing my paper on LLM calibration (<a href="https://arxiv.org/abs/2509.24988" target="_blank" style="color:#2563eb; text-decoration:none;"><strong>Generalized Correctness Models</strong></a>), I wanted to share some of the basic ideas I would benefited to have known from the start. 
+      </p>
+    
+    <p><strong>Q:</strong> What is calibration?<br>
+    <strong>A:</strong> Calibration is the idea that a “confidence score” outputted by a model or system should line up with its accuracy. A 70% confidence should correspond to a 70% chance of a correct answer. Calibration measures <strong>one desirable quality</strong> in confidence scores, and it should be <strong>used in conjunction</strong> with metrics like accuracy and AUROC that measure other important qualities of confidence scores 
+    (<a href="https://proceedings.neurips.cc/paper/2017/hash/9ef2ed4b7fd2c810847ffa5fa85bce38-Abstract.html" target="_blank">Guo et al., 2017</a>).</p>
+    
+    <p><strong>Q:</strong> Is it really useful to have good confidence scores, having good accuracy seems to be enough?<br>
+    <strong>A:</strong> <strong>A:</strong> Good confidence scores are widely applicable, it enable us to understand honesty in a model (<a href="https://arxiv.org/abs/2207.05221" target="_blank">Kadavath et al., 2022</a>), identify hallucinations 
+    (<a href="https://arxiv.org/abs/2504.04641" target="_blank">Zhou et al., 2025</a>), route to experts when unconfident 
+    (<a href="https://arxiv.org/abs/2403.09044" target="_blank">Hu et al., 2024</a>), rejection sample 
+    (<a href="https://arxiv.org/abs/2503.03356" target="_blank">Chuang et al., 2025</a>), and even be leveraged as an RL signal to improve the quality of a model’s behavior 
+    (<a href="https://arxiv.org/abs/2505.01866" target="_blank">Li et al., 2025b</a>). 
+    E.g., if you can sample from the model multiple times, picking the output with the most confidence can increase your performance.
+    
+    <p><strong>Q:</strong> Sounds like there's a lot of applications, so better calibration will generally improve performance?<br>
+    <strong>A:</strong> No, not necessarily. If your accuracy is 50% (e.g., a random classifier), then you can simply reply with 50% confidence on every prediction and be perfectly calibrated. A random classifier is not useful! Another scenario is where you output the same probability for every prediction; simply having it match your accuracy makes you perfectly calibrated. For calibration to be useful, you need both high accuracy and good calibration, in addition to a diverse confidence histogram that doesn’t predict the same confidence for every prediction.</p>
+    
+    <p><strong>Q:</strong> That makes sense, then to extract a model's confidences we can measure how uncertain it is about its responses: if we give the model a question, and it generates one answer six times and another answer four times, then its confidence should be 60% right?<br>
+    <strong>A:</strong> No, that’s related to an idea called <em>uncertainty estimation</em>. Uncertainty estimation attempts to determine the variance in a model’s outputs 
+    (<a href="https://arxiv.org/abs/2302.09664" target="_blank">Kuhn et al., 2023</a>). 
+    But critically, how uncertain a model is does not always correspond to how often it is correct. For example, when an easy question has multiple correct answers, the model could be uncertain as to which answer to pick, but regardless, it should be 100% confident about its correctness. While some uncertainty estimation techniques are relevant to confidence calibration, we ultimately want to align the model’s confidences with some concept of ground truth correctness — how often the model’s responses are really correct.</p>
+    
+    <p><strong>Q:</strong> So how do we measure calibration? When you ask a language model a question, the model's response to it is fixed?<br>
+    <strong>A:</strong> Yes, but it is not a simple instance-level question — we use dataset-level metrics such as <em>Expected Calibration Error (ECE)</em> and <em>Root Mean Squared Calibration Error (RMSCE)</em> to evaluate how well confidence aligns with accuracy across many samples 
+    (<a href="https://proceedings.neurips.cc/paper/2017/hash/9ef2ed4b7fd2c810847ffa5fa85bce38-Abstract.html" target="_blank">Guo et al., 2017</a>). 
+    In practice, ECE divides predictions into confidence bins (e.g., 0–10%, 10–20%, …) and measures the difference between the average confidence and the actual accuracy in each bin, then averages those differences. RMSCE does the same but takes the root mean square instead of the absolute difference, making it more sensitive to large miscalibrations. Together, these metrics quantify whether a model that says “I’m 80% confident” is indeed correct about 80% of the time.</p>
+    </article>
+
+    <hr style="margin:40px 0;">
+
+    <!-- Future Like & Comment Containers -->
+    <section id="post-meta" style="text-align:center;">
+      <div id="like-container" style="display:none;">
+        ❤️ <span id="like-count">0</span> likes
+      </div>
+      <div id="comment-container" style="display:none;margin-top:20px;">
+        <h3>Comments</h3>
+      </div>
+    </section>
+
+    <p style="text-align:right;font-size:small;margin-top:50px;">
+      <a href="../../index.html">Back to Home</a>
+    </p>
+  </body>
+</html>

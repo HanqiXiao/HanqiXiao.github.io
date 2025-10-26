@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog – Hanqi Xiao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../stylesheet.css">
+  </head>
+
+  <body style="max-width:800px;margin:auto;padding:20px;line-height:1.6;">
+    <h1 style="text-align:center;">Blog</h1>
+    <p style="text-align:center;"><a href="../index.html">← Back to Home</a></p>
+
+    <section style="margin-top:40px;">
+      <article style="margin-bottom:40px;">
+        <h2>
+          <a href="posts/calibration.html" style="text-decoration:none;color:#000;">
+          <strong>What is Calibration?</strong>
+          </a>
+        </h2>
+        <!-- <p style="margin-top:0;"><em>Posted on October 26, 2025</em></p> -->
+        <p><em>Posted on October 26, 2025</em></p>
+        <div class="synopsis" data-src="posts/calibration.html">
+            Loading summary...
+        </div>
+        <p><a href="posts/calibration.html">Read more →</a></p>
+      </article>
+
+      <!-- Example placeholder for future posts -->
+      <!--
+      <article>
+        <h2><a href="interpretability.html">Interpretable Compression in LLMs</a></h2>
+        <p><em>Coming soon</em></p>
+      </article>
+      -->
+    </section>
+
+    <p style="text-align:right;font-size:small;margin-top:50px;">
+      <a href="../index.html">Back to Home</a>
+    </p>
+  </body>
+</html>
+
+<script>
+    // Auto-load synopsis from each linked post
+    document.querySelectorAll('.synopsis').forEach(async el => {
+      const src = el.getAttribute('data-src');
+      try {
+        const res = await fetch(src);
+        const html = await res.text();
+  
+        // Parse HTML to find the first <p> inside <article>
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const firstParagraph = doc.querySelector('article p');
+        if (firstParagraph) {
+          el.textContent = firstParagraph.textContent.slice(0,);
+        } else {
+          el.textContent = 'No summary available.';
+        }
+      } catch (err) {
+        console.error('Error loading synopsis:', src, err);
+        el.textContent = 'Error loading summary.';
+      }
+    });
+</script>
