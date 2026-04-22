@@ -76,3 +76,16 @@ Reasoning is hard to define, however, it is my experience that there are ways in
 **The difference between the feeling/experience of contradiction, and the ARAE of ‘wanting to not be contradictory’.** We are able to detect a contradiction as an experience, I refer to this as ‘the feeling that there is a contradiction’, however, we can make the choice of whether or not to correct a line of reasoning which gives us ‘the feeling that there is a contradiction’, our motivation for correcting it is a separate ARAE of ‘the feeling that I want to correct contradictions’. The ‘feeling that I want to correct contradictions’ is generally much weaker than an ARAE like ‘the feeling that I want to satiate my hunger’, especially if the current experience is ‘dying of starvation’. 
 
 **Another way to see that alignment with ARAE interacts with time.** We know we currently have experience, and are forced to reason that by our ‘prior of induction’ and our ‘prior that time exists’ that ‘in the future we will also have experience’. Then we are also forced to reason by induction that in this future experience, we will also have ARAE. Further, since all individual ARAE are statements that inherently assume that we will care about aligning with this ARAE in the future, we can be said to care about the future. 
+
+## Consequences of the Foundations
+
+**What does this philosophy say about how we should make decisions?**  
+All justification for action starts from the alignment requiring aspects of experience (ARAE).   
+One of our ARAE is caring about the future.  
+In conjunction with our prior of time and prior of induction, ‘caring about the future’ justifies us to consider ARAE that we **predict** we will experience in the future as valid ARAE (just discounted a bit due to uncertainty).  
+This establishes that **predicting the future** is extremely important to align with ARAE (i.e., fulfill the goal of life).   
+Conclusion:  
+The strength of the prescriptive justification for a decision is the strength of the ARAE **we** **predict** we will feel both now and in the future *given* the decision. 
+
+**What does this philosophy say about the value of truth?**  
+Taking empirical observations of the world and doing logical deduction / reasoning to find the truth (i.e. predict the future) allows us to better fulfill the goal of life. *I.e., the feeling that we care about the future is the reason why we care about predicting the future, and feeling that predicting the future is important is why finding the truth is important. For me, that is the strength of the importance of truth.* 
