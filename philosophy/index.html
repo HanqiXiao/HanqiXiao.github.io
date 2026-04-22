@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Philosophy – Hanqi Xiao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../stylesheet.css">
+    <style>
+      body {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px 30px;
+        line-height: 1.7;
+      }
+      #philosophy-content h1 { font-size: 26px; font-weight: bold; margin-top: 36px; margin-bottom: 8px; }
+      #philosophy-content h2 { font-size: 20px; font-weight: bold; margin-top: 28px; margin-bottom: 6px; }
+      #philosophy-content h3 { font-size: 16px; font-weight: bold; margin-top: 20px; margin-bottom: 4px; }
+      #philosophy-content p  { margin: 10px 0; }
+      #philosophy-content strong { font-weight: bold; }
+      #philosophy-content em { font-style: italic; }
+      #philosophy-content hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+    </style>
+  </head>
+
+  <body>
+    <p style="text-align:center;"><a href="../index.html">← Back to Home</a></p>
+
+    <div id="philosophy-content">Loading...</div>
+
+    <p style="text-align:right;font-size:small;margin-top:50px;">
+      <a href="../index.html">Back to Home</a>
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      fetch('statement_of_philosophy.md')
+        .then(r => r.text())
+        .then(md => {
+          document.getElementById('philosophy-content').innerHTML = marked.parse(md);
+        });
+    </script>
+  </body>
+</html>
