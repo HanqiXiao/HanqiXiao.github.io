@@ -2,7 +2,7 @@
 
 # Note for readers:
 
-I am primarily a computer science researcher, but I think it is important to consider why I experience the things I experience, and from there, how I should change my experience. \[By ‘change my experience’ I include what people usually think of as ‘actions to shift the way I think’, ‘conscious decisions’, and ‘physical actions’; I refer to these considerations as ‘philosophy’.\] I am sharing my philosophy in order to attract the attention of others who similarly find these questions interesting, to engage in discussion in order to improve my answers to these questions, and out of the vanity of sharing ideas I have put a significant amount of effort into (though perhaps not efficiently) since I first started writing down similar thoughts when I was 13\. Feel free to contact me :D
+I am primarily a computer science researcher, but I think it is important to consider why I experience the things I experience, and from there, how I should change my experience. \[By ‘change my experience’ I include what people usually think of as ‘actions to shift the way I think’, ‘conscious decisions’, and ‘physical actions’; I refer to these considerations as ‘philosophy’.\] I am sharing my philosophy in order to attract the attention of others who similarly find these questions interesting, to engage in discussion in order to improve my answers to these questions, and out of the vanity of sharing ideas I have put some amount of effort into (though perhaps not efficiently) since I first started writing down similar thoughts when I was 13\. Feel free to contact me :D
 
 ## Disclaimers:
 
