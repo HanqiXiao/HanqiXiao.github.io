@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>LifeTrace – Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../stylesheet.css">
+  </head>
+
+  <body style="max-width:800px;margin:auto;padding:20px;line-height:1.6;">
+    <p style="text-align:center;"><a href="../../index.html">← Back to Blog</a></p>
+
+    <article>
+      <h1>LifeTrace</h1>
+
+      <p>TLDR: build+installed a camera on my chest and realized OCR can be used to cheaply record and store what I did in an entire day. Recently I realized companies life Plaud and Pocket are picking up speed in the proliferation of AI-voice recorders that you can carry with you. I've always had in the back of the mind ideas surrounding self-quantification and they suddently reignited some impetus to build.</p>
+
+      <p>I don't think recording just your voice is enough. I'm interested in devices that can account or 'quantify' everything that you do. For me, this is cool because I can have even more detailed accounts of what I did in a day, and surface relevant information serendipidously.</p>
+
+      
+      <p>Using a VLM to analyze images is too slow / expensive so I came up w/ a neat trick where I use RapidOCR to process videos at 2 frames per second on a cheap Digital Ocean droplet. Turns out this is highly effective at figuring out what I'm doing, since I mostly look at screens / text — and its better than screen recording since it doesn't care what screen/written text I'm looking at.</p>
+      
+      <p>I setup a quick claude routine that grabs the OCR data from the server and analyses it, and it pretty much recovers exactly what I spent time on that day. I pipe it to another routine that references my daily notes / etc to surface interesting things I should read.</p>
+      
+      <figure style="text-align:center;margin:30px 0;">
+        <img src="LifeTrace.jpg" alt="LifeTrace wearable recording device" style="max-width:320px;width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">The current LifeTrace device; it's a repurposed APPL 110 final project enclosure housing a Raspberry Pi 4 and battery.</figcaption>
+      </figure>
+
+      <h2>Limitations</h2>
+      <p>The system is still pretty new (started the project a week ago), I might write another blog to update once I use it more / also integrating audio recording into the system.</p>
+
+      <p>I'm using a recording device built for a class final project (APPL 110 at UNC w/ Blake, Giselle) as the recording device. It can be made much more compact — currently half the volume is a raspi V4 and the other half is a big battery. I think it's possible to use a much smaller dedicated board for video/audio and also reduce the size of the battery as a result. Would like to add some other functions too, lmk if any ideas.</p>
+    </article>
+
+    <hr style="margin:40px 0;">
+
+    <!-- Future Like & Comment Containers -->
+    <section id="post-meta" style="text-align:center;">
+      <div id="like-container" style="display:none;">
+        ❤️ <span id="like-count">0</span> likes
+      </div>
+      <div id="comment-container" style="display:none;margin-top:20px;">
+        <h3>Comments</h3>
+      </div>
+    </section>
+
+    <p style="text-align:right;font-size:small;margin-top:50px;">
+      <a href="../../../index.html">Back to Home</a>
+    </p>
+  </body>
+</html>
