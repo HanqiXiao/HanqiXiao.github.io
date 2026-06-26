@@ -1,3 +1,5 @@
+# Note: The current version is in the process of an update to incorporate thoughts on the source of Prescription and the interaction between large groups of people.
+
 # A Statement of my Philosophy
 
 # Note for readers:
