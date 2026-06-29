@@ -41,6 +41,7 @@
     <strong>A:</strong> Yes, but it is not a simple instance-level question — I like to use dataset-level metrics such as <em>Expected Calibration Error (ECE)</em> and <em>Root Mean Squared Calibration Error (RMSCE)</em> to evaluate how well confidence aligns with accuracy across many samples 
     (<a href="https://proceedings.neurips.cc/paper/2017/hash/9ef2ed4b7fd2c810847ffa5fa85bce38-Abstract.html" target="_blank">Guo et al., 2017</a>). 
     In practice, ECE divides predictions into confidence bins (e.g., 0–10%, 10–20%, …) and measures the difference between the average confidence and the actual accuracy in each bin, then averages those differences. RMSCE is adaptively binned and takes the root mean square instead of the absolute difference, making it likely more accurate as a comparison measure but less immediately interpretable. Many other metrics exist (the landscape of different metrics is large, but you'll see ECE in most calibration papers, though it may not be the most accurate) and all seek to quantify whether in instances when a model that says “I’m 80% confident”, it is indeed correct about 80% of the time.</p>
+    <p>--Hanqi Xiao</p>
     </article>
 
     <hr style="margin:40px 0;">
