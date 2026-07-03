@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>LifeTrace 2 – Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../stylesheet.css">
+  </head>
+
+  <body style="max-width:800px;margin:auto;padding:20px;line-height:1.6;">
+    <p style="text-align:center;"><a href="../../index.html">← Back to Blog</a></p>
+
+    <article>
+      <h1>LifeTrace 2</h1>
+
+      <p>I'm heading to Korea for ICML. I've downsized the earlier lifetrace assembly so that I can bring it with me more easily. This version uses a raspi Zero with a 128GB drive to store audio files since I expect the venue to have some wifi issues. For this trip I'm mainly interested in recording what I say / hear (passive recording for the whole day), so I only focused on getting the Audio recording feature integrated.</p>
+
+      <p>The box contains the main board and a small battery, and it can operate as long as the extension with the microphone and SanDisk drive is attached. I also have a larger Anker battery that I plan to use to charge both my phone and this device. The audio is uploaded to a server when WiFi is discoverable and we run ASR to keep only transcriptions with no speaker tagging.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0;">
+        <figure style="margin:0;text-align:center;overflow:hidden;">
+          <img src="IMG_7929.jpeg" alt="LifeTrace 2 device, top view" style="width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);transform:rotate(-90deg);transform-origin:center center;">
+          <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">The downsized setup, a Raspi Zero and Pi-Sugar 1200mAh battery in a small case.</figcaption>
+        </figure>
+        <figure style="margin:0;text-align:center;overflow:hidden;">
+          <img src="IMG_7930.jpeg" alt="LifeTrace 2 internals showing Raspi Zero" style="width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);transform:rotate(-90deg);transform-origin:center center;">
+          <figcaption style="font-size:0.9em;color:#555;margin-top:8px;"> Exposes the microusb to connect the microphone / flas-drive and a USB-C port at the bottom to charge the on-board Pi-Sugar battery.</figcaption>
+        </figure>
+      </div>
+
+      <p>The internal assembly is minimal: the Raspi Zero sits inside the enclosure with a USB-C power port exposed on the bottom. The extension cable carries the microphone and SanDisk flash drive.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0;">
+        <figure style="margin:0;text-align:center;">
+          <img src="IMG_7933.jpeg" alt="LifeTrace 2 running, green LED visible" style="width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+          <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">Can run with just the microphone extension connected due to a small on-board battery / battery hat.</figcaption>
+        </figure>
+        <figure style="margin:0;text-align:center;">
+          <img src="IMG_7931.jpeg" alt="Device lit up blue, with Anker battery" style="width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+          <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">Can charge the on-board battery with the battery pack I use for my phone : D.</figcaption>
+        </figure>
+      </div>
+
+      <figure style="text-align:center;margin:30px 0;">
+        <img src="IMG_7934.jpeg" alt="Full LifeTrace 2 setup with SanDisk drive and Anker battery" style="max-width:480px;width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">Can operate longer term with both the microphone/SanDisk flash-drive extension, connected to the Anker battery.</figcaption>
+      </figure>
+
+      <h2>Next Steps</h2>
+      <p>I'll be trying to add the camera / a more efficient case for the next iteration.</p>
+
+      <p>--Hanqi Xiao</p>
+    </article>
+
+    <hr style="margin:40px 0;">
+
+    <!-- Future Like & Comment Containers -->
+    <section id="post-meta" style="text-align:center;">
+      <div id="like-container" style="display:none;">
+        ❤️ <span id="like-count">0</span> likes
+      </div>
+      <div id="comment-container" style="display:none;margin-top:20px;">
+        <h3>Comments</h3>
+      </div>
+    </section>
+
+    <p style="text-align:right;font-size:small;margin-top:50px;">
+      <a href="../../../index.html">Back to Home</a>
+    </p>
+  </body>
+</html>
