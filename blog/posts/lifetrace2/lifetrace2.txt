@@ -1,7 +1,0 @@
-I'm heading to Korea for ICML. I've downsized the earlier lifetrace assembly so that I can bring it with me more easily. This version uses a raspi Zero with a 128B drive to store audio files since I expect the venue to have some wifi issues. It only has the audio recording feature. For this trip I'm mainly interested in recording what I say / hear -- 
-
-The box contains the main board and a small battery, and it can operate as long as the extension witht he microphone and SanDisk drive is attached.
-I also have a larger Anker battery that I plan to use to charge both my phone and this device. 
-
-I'll be trying to add the camera / a more efficient case for the next iteration.
-
