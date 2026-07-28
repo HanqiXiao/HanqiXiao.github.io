@@ -4,7 +4,7 @@
 
 # Note for readers:
 
-I am primarily a computer science researcher, but I think it is interesting to consider why I experience the things I experience, and from there, how I should change my experience. \[By ‘change my experience’ I include any type of decision, whether its impact is in changing how I think about the world (e.g., adopt new shortcuts/frameworks for thinking), or physically changing the world I live in (change what food I eat / what work I do); I refer to these considerations as ‘philosophy’.\] I am sharing my philosophy in order to attract the attention of others who similarly find these questions interesting, to engage in discussion in order to improve my answers to these questions, and out of the vanity of sharing ideas I have put a significant amount of effort into (though perhaps not efficiently) since I first started writing down similar thoughts when I was 13\. Feel free to contact me to discuss any related ideas :D
+I am primarily a computer science researcher, but I think it is interesting to think about why I experience the things I experience, and from there, how I should change my experience. Feel free to contact me to discuss any related ideas :D
 
 ## Disclaimers:
 
