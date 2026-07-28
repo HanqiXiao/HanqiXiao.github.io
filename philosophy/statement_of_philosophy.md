@@ -1,4 +1,4 @@
-# Note: The current version is in the process of an update to incorporate thoughts on the source of Prescription and the interaction between large groups of people -- Hanqi Xiao.
+# Note: The current version is in the process of an update to incorporate thoughts on 1) the source of prescription and 2) interactions between large groups of people (in a systems / feedback loops / cybernetics sense) -- Hanqi Xiao.
 
 # A Statement of My Philosophy
 
