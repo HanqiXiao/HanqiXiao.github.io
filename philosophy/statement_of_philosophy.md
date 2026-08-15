@@ -1,4 +1,4 @@
-# Note: The current version is in the process of an update to incorporate thoughts on 1) the source of prescription and 2) interactions between large groups of people (in a systems / feedback loops / cybernetics sense) -- Hanqi Xiao.
+# Note: The current version is in the process of an update to incorporate thoughts on 1) the source of prescription and 2) interactions between large groups of people (in a systems / feedback loops / cybernetics sense) -- Hanqi.
 
 # A Statement of My Philosophy
 
@@ -8,7 +8,7 @@ I am primarily a computer science researcher, but I think it is interesting to t
 
 ## Disclaimers:
 
-**Relationship to other lines of thought:** When developing my philosophy, extensive reference to existing philosophy was not one of my priorities :P. It will not be wrong to say that I take some pleasure in coming up with my philosophy ‘by myself’, though that sentiment is neither truly accurate (ideas from various philosophies have permeated society), nor efficient (there are clearly more efficient methods if the goal was simply to reach some conclusion). I seek in the near future to be more knowledgeable regarding the thoughts of others. I cannot identify with great confidence the points of similarity and dissimilarity with existing philosophies. I have heard from people I have talked to that parts of this philosophy has flavors of phenomenalism, desire fulfillment theories of well-being, Hume’s metaphysics, some forms of utilitarianism, and ideas similar to Kant’s apriori (but again unable to guarantee that this is accurate as of now; I am gradually reading more and will hopefully have an answer to this in the future).
+**Relationship to other lines of thought:** I consider experience to be the source of everything we know. Most people I talked to consider my philosophy vaguely Humian. 
 
 **Prediction of future changes:** This is the statement of what I currently believe, according to our experience and the limits of my reasoning, both of which may be flawed. In addition, I have come to find that generally, whenever I think I have found some correct philosophy, I will soon discover problems within it. I will update my claims if new evidence contradicts my previous claims; I’ll also be continuously polishing the wording of my claims. **The current version can be considered a rough draft which includes the core assumptions underlying how I think, and I plan to add case studies applying my philosophy to specific questions in the future**. All previous public versions should be available through github. 
 
