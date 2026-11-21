@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>Interject – Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Interject is a small Claude Code mod: stop at any line of a reply and send an agent with full tool use, keep its answer for your next message, or cut and have Claude rewrite from there. Everything stays inline.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Interject: ask about any line of a Claude reply">
+    <meta property="og:description" content="Stop at any line of a Claude Code reply: send an agent with full tool use, keep its answer for your next message, or cut and rewrite from there. Everything stays inline.">
+    <meta property="og:url" content="https://hanqixiao.github.io/blog/posts/interject/interject.html">
+    <meta property="og:image" content="https://hanqixiao.github.io/blog/posts/interject/social-card.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interject: ask about any line of a Claude reply">
+    <meta name="twitter:description" content="Stop at any line of a Claude Code reply: send an agent with full tool use, keep its answer for your next message, or cut and rewrite from there.">
+    <meta name="twitter:image" content="https://hanqixiao.github.io/blog/posts/interject/social-card.jpg">
     <link rel="stylesheet" href="../../../stylesheet.css">
 
     <!-- GoatCounter analytics -->
@@ -17,11 +29,19 @@
     <article>
       <h1>Interject</h1>
 
-      <p>Have you ever had the experience where you can't understand critical parts of a long output by Claude? I knew that it would be so much easier if I could clarify some of the phrases it was using inline, and trigger rewrites of the sections after them. This made me create a Claude Code mod called Interject, mainly as a personal tool. Think of it as a superset of the built-in side chat and reply features in Claude Code. At any time, on any line, you can make an inline interjection that stays with that line, and it can start an agent that answers a question about what you commented on. You can recurse into it as deep as you need with nested questions, ask follow-up questions, and include the questions and their answers in your next message. You can also throw away the rest of a reply and restart from that line, or fork the whole thing into a different session.</p>
+      <p>Ever get lost halfway through a long Claude reply? Claude Code already has side chats and replies, but their answers float away from the line you asked about. So I built <strong>Interject</strong>, a small Claude Code mod, mostly for myself. With it, <strong>everything stays inline</strong>, at the line where you asked.</p>
+
+      <p>Stop at any line of a reply, even while Claude is still writing, and:</p>
+      <ul>
+        <li><strong>Send an agent with full tool use</strong> (<em>Ask on the side</em>). It can read files, run commands and search the web, and its answer lands in a box right under the line.</li>
+        <li><strong>Keep its answer for your next message</strong>, so Claude builds on what you found out.</li>
+        <li><strong>Cut the reply</strong>, and Claude rewrites from that line, following your note.</li>
+      </ul>
+      <p>You can also follow up on any answer, ask nested questions inside one, and turn a side chat into its own session. Each feature is shown below.</p>
 
       <figure style="text-align:center;margin:30px 0;">
-        <video src="interject-desktop-demo.mp4" poster="interject-desktop-demo-poster.jpg" controls playsinline preload="metadata" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></video>
-        <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">A 3-minute narrated demo in Claude Code Desktop, the main interface, where the boxes and forms open right inside the reply. Waits are cut or sped up.</figcaption>
+        <video src="interject-teaser.mp4" poster="interject-teaser-poster.jpg" controls playsinline preload="metadata" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></video>
+        <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">A 35-second overview in Claude Code Desktop. Want the full tour? Watch the <a href="#full-demo">3-minute narrated demo</a> below.</figcaption>
       </figure>
 
       <h2>Features</h2>
@@ -31,37 +51,43 @@
       <h3>One form, four choices</h3>
       <p>A form opens under the line. Type a question or a note, then pick what happens to it.</p>
       <figure style="margin:14px 0 30px;"><img src="img/02-interject-form.jpg" alt="The form under the line: Ask on the side, Quick answer, Add to my next message, Cut here and continue" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
-      <h3>Quick answer</h3>
-      <p>A short answer in a few seconds, without tools, in a box under the line.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/03-quick-answer.jpg" alt="A quick answer in a box under the line" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>Ask on the side</h3>
       <p>An agent with the whole conversation and full tool use works on your question in the background. Its answer lands in a box at the line, and nothing is added to the main conversation.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/04-ask-on-the-side.jpg" alt="Click Ask on the side, and the answer lands in a box at the line" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/03-ask-on-the-side.jpg" alt="Click Ask on the side, and the answer lands in a box at the line" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <p>Like the answer? Click <em>keep</em> on its box, and the question and answer go with your next message.</p>
       <h3>Cut here and continue</h3>
       <p>When a reply goes off track, cut it at any line. The rest is dropped, and Claude rewrites from there, following your note.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/05-cut-here-and-continue.jpg" alt="Cut here and continue: the rest of the reply is withdrawn" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
-      <figure style="margin:14px 0 30px;"><img src="img/06-rewrite-follows-the-note.jpg" alt="The rewrite follows the note: each symbol is defined before its equation" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/04-cut-here-and-continue.jpg" alt="Cut here and continue: the rest of the reply is withdrawn" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/05-rewrite-follows-the-note.jpg" alt="The rewrite follows the note: each symbol is defined before its equation" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>Follow up</h3>
       <p>Click <em>follow up</em> on any box. The follow-up sits right under it.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/07-follow-up.jpg" alt="Click follow up on a box, and the follow-up sits under it" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/06-follow-up.jpg" alt="Click follow up on a box, and the follow-up sits under it" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>Nested interjections</h3>
       <p>Select a line inside an answer and interject again, as deep as you need. Each new box brings along the questions and answers above it.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/08-nested-interjection.jpg" alt="A question asked inside a side answer" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/07-nested-interjection.jpg" alt="A question asked inside a side answer" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>Add a note to your next message</h3>
       <p><em>Add to my next message</em> leaves a note at the line. Like a kept box, it goes with your next message. When you keep a follow-up, the boxes it builds on go too. A line above the prompt counts everything that will go.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/09-keep-and-add-to-next-message.jpg" alt="Kept answers and notes, counted above the prompt" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/08-keep-and-add-to-next-message.jpg" alt="Kept answers and notes, counted above the prompt" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>See exactly what is sent</h3>
       <p>Click <em>show</em> on that line to see the exact text that Claude will get. After you send, <em>show</em> on the reply shows what went with your message.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/10-see-what-goes-with-next-message.jpg" alt="The exact text that goes with the next message" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
-      <figure style="margin:14px 0 30px;"><img src="img/11-reply-uses-what-you-kept.jpg" alt="Claude's reply, using what was kept, with a show link for what was sent" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/09-see-what-goes-with-next-message.jpg" alt="The exact text that goes with the next message" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/10-reply-uses-what-you-kept.jpg" alt="Claude's reply, using what was kept, with a show link for what was sent" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>Fork to session</h3>
       <p>Turn any side chat into a session of its own. In Claude Code Desktop, it is listed under the original session, and the original hears back from it.</p>
-      <figure style="margin:14px 0 30px;"><img src="img/12-fork-to-session.jpg" alt="The fork to session card" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
-      <figure style="margin:14px 0 30px;"><img src="img/13-fork-is-its-own-session.jpg" alt="The fork, listed under the original session in the sidebar" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/11-fork-to-session.jpg" alt="The fork to session card" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/12-fork-is-its-own-session.jpg" alt="The fork, listed under the original session in the sidebar" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <p><em>Note:</em> listing the fork under your session needs bypass permissions mode. In auto mode, the fork opens as a separate, top-level session instead.</p>
+      <h3>Quick answer</h3>
+      <p>When you don't need tools, <em>Quick answer</em> replies in a few seconds, in the same kind of box under the line.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/13-quick-answer.jpg" alt="A quick answer in a box under the line" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
       <h3>Everywhere you use Claude Code</h3>
       <p>Boxes are saved per session and come back when you resume. Interject is made for Claude Code Desktop, and it also works in the terminal and in VS Code.</p>
+
+      <h2 id="full-demo">Full demo</h2>
+      <figure style="text-align:center;margin:14px 0 30px;">
+        <video src="interject-desktop-demo.mp4" poster="interject-desktop-demo-poster.jpg" controls playsinline preload="metadata" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></video>
+        <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">A 3-minute narrated demo in Claude Code Desktop, the main interface, where the boxes and forms open right inside the reply. Waits are cut or sped up.</figcaption>
+      </figure>
 
       <h2>Limitations</h2>
       <p>Interject is a mod, so it can only do what Claude Code lets mods do. Several features are workarounds:</p>
