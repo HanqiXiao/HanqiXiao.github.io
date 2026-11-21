@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Interject – Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../stylesheet.css">
+
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://hanqix.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </head>
+
+  <body style="max-width:800px;margin:auto;padding:20px;line-height:1.6;">
+    <p style="text-align:center;"><a href="../../index.html">← Back to Blog</a></p>
+
+    <article>
+      <h1>Interject</h1>
+
+      <p>Have you ever had the experience where you can't understand critical parts of a long output by Claude? I knew that it would be so much easier if I could clarify some of the phrases it was using inline, and trigger rewrites of the sections after them. This made me create a Claude Code mod called Interject, mainly as a personal tool. Think of it as a superset of the built-in side chat and reply features in Claude Code. At any time, on any line, you can make an inline interjection that stays with that line, and it can start an agent that answers a question about what you commented on. You can recurse into it as deep as you need with nested questions, ask follow-up questions, and include the questions and their answers in your next message. You can also throw away the rest of a reply and restart from that line, or fork the whole thing into a different session.</p>
+
+      <figure style="text-align:center;margin:30px 0;">
+        <video src="interject-desktop-demo.mp4" poster="interject-desktop-demo-poster.jpg" controls playsinline preload="metadata" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></video>
+        <figcaption style="font-size:0.9em;color:#555;margin-top:8px;">A 3-minute narrated demo in Claude Code Desktop, the main interface, where the boxes and forms open right inside the reply. Waits are cut or sped up.</figcaption>
+      </figure>
+
+      <h2>Features</h2>
+      <h3>Interject at any line</h3>
+      <p>Select text in a reply, even while Claude is still writing, and click <em>✎ Interject here</em> above the prompt. You can also type <code>/interject</code>.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/01-interject-here.jpg" alt="Text selected in a reply, and the Interject here button above the prompt" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>One form, four choices</h3>
+      <p>A form opens under the line. Type a question or a note, then pick what happens to it.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/02-interject-form.jpg" alt="The form under the line: Ask on the side, Quick answer, Add to my next message, Cut here and continue" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>Quick answer</h3>
+      <p>A short answer in a few seconds, without tools, in a box under the line.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/03-quick-answer.jpg" alt="A quick answer in a box under the line" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>Ask on the side</h3>
+      <p>An agent with the whole conversation and full tool use works on your question in the background. Its answer lands in a box at the line, and nothing is added to the main conversation.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/04-ask-on-the-side.jpg" alt="Click Ask on the side, and the answer lands in a box at the line" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <p>Like the answer? Click <em>keep</em> on its box, and the question and answer go with your next message.</p>
+      <h3>Cut here and continue</h3>
+      <p>When a reply goes off track, cut it at any line. The rest is dropped, and Claude rewrites from there, following your note.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/05-cut-here-and-continue.jpg" alt="Cut here and continue: the rest of the reply is withdrawn" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/06-rewrite-follows-the-note.jpg" alt="The rewrite follows the note: each symbol is defined before its equation" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>Follow up</h3>
+      <p>Click <em>follow up</em> on any box. The follow-up sits right under it.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/07-follow-up.jpg" alt="Click follow up on a box, and the follow-up sits under it" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>Nested interjections</h3>
+      <p>Select a line inside an answer and interject again, as deep as you need. Each new box brings along the questions and answers above it.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/08-nested-interjection.jpg" alt="A question asked inside a side answer" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>Add a note to your next message</h3>
+      <p><em>Add to my next message</em> leaves a note at the line. Like a kept box, it goes with your next message. When you keep a follow-up, the boxes it builds on go too. A line above the prompt counts everything that will go.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/09-keep-and-add-to-next-message.jpg" alt="Kept answers and notes, counted above the prompt" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>See exactly what is sent</h3>
+      <p>Click <em>show</em> on that line to see the exact text that Claude will get. After you send, <em>show</em> on the reply shows what went with your message.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/10-see-what-goes-with-next-message.jpg" alt="The exact text that goes with the next message" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/11-reply-uses-what-you-kept.jpg" alt="Claude's reply, using what was kept, with a show link for what was sent" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <h3>Fork to session</h3>
+      <p>Turn any side chat into a session of its own. In Claude Code Desktop, it is listed under the original session, and the original hears back from it.</p>
+      <figure style="margin:14px 0 30px;"><img src="img/12-fork-to-session.jpg" alt="The fork to session card" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <figure style="margin:14px 0 30px;"><img src="img/13-fork-is-its-own-session.jpg" alt="The fork, listed under the original session in the sidebar" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;"></figure>
+      <p><em>Note:</em> listing the fork under your session needs bypass permissions mode. In auto mode, the fork opens as a separate, top-level session instead.</p>
+      <h3>Everywhere you use Claude Code</h3>
+      <p>Boxes are saved per session and come back when you resume. Interject is made for Claude Code Desktop, and it also works in the terminal and in VS Code.</p>
+
+      <h2>Limitations</h2>
+      <p>Interject is a mod, so it can only do what Claude Code lets mods do. Several features are workarounds:</p>
+      <ul>
+        <li><strong>A cut sends another message.</strong> Mods can't delete part of a saved reply. So <em>Cut here and continue</em> sends a new message in your name: it quotes the line, tells Claude that the rest of the reply is withdrawn, and asks it to continue from your interjection. The screen hides the rest, but the full reply stays in the conversation's history (unless you cut while Claude is still writing that part). A cut doesn't undo files that Claude changed or commands it ran after that line; use <code>/rewind</code> for that. Cutting an older reply continues at the end of the conversation.</li>
+        <li><strong>Without bypass permissions, side chats run in a separate terminal Claude.</strong> In Desktop, the session may refuse to start the side chat's agent for a mod (in auto mode it always does). Interject then runs the side chat in a separate Claude Code process in the background (<code>claude -p</code>, forking the conversation). It has the whole conversation and the same tools, but it doesn't share the session's prompt cache, so its first request costs more on a long conversation. Outside auto mode, any tool call that would need your approval is refused, since nobody is there to approve it.</li>
+        <li><strong>Without bypass permissions, a fork isn't listed under your session.</strong> Fork to session asks Desktop to make a <em>New task</em> card under your session, but outside bypass mode Desktop may refuse that to a mod (auto mode always does). Interject then forks the conversation with a terminal Claude and opens the result in Desktop as a separate session of its own.</li>
+        <li><strong>Side chats use your plan's usage</strong>, like any other request.</li>
+        <li><strong>You select, then click.</strong> Mods only get clicks on buttons and links, so clicking a line directly isn't possible. Matching a selection to its line can miss on unusual formatting, like formulas. When that happens, the box goes at the end of the reply.</li>
+        <li><strong>The ✎ button isn't in VS Code</strong>, which has no space above the prompt for mods; type <code>/interject</code> there instead. Typing <code>/interject</code> scrolls to the bottom, because typing in the prompt box always does.</li>
+        <li><strong>Known bug:</strong> after a rewind in Desktop, earlier boxes still show, but the ✎ button can stop appearing.</li>
+        <li>A session holds about 2,000 boxes. Past that, its oldest boxes are removed.</li>
+      </ul>
+      <p>It would be cool if Claude Code supported inline interjections natively one day, or gave mods even more room to build things like this!</p>
+
+      <h2>Install</h2>
+      <p>In Claude Code, type:</p>
+      <pre><code>/plugin install interject --marketplace The-Inscrutable-X/interject</code></pre>
+      <p>Code: <a href="https://github.com/The-Inscrutable-X/interject" target="_blank">github.com/The-Inscrutable-X/interject</a></p>
+
+      <p>--Hanqi Xiao</p>
+    </article>
+
+    <hr style="margin:40px 0;">
+
+    <!-- Future Like & Comment Containers -->
+    <section id="post-meta" style="text-align:center;">
+      <div id="like-container" style="display:none;">
+        ❤️ <span id="like-count">0</span> likes
+      </div>
+      <div id="comment-container" style="display:none;margin-top:20px;">
+        <h3>Comments</h3>
+      </div>
+    </section>
+
+    <p style="text-align:right;font-size:small;margin-top:50px;">
+      <a href="../../../index.html">Back to Home</a>
+    </p>
+  </body>
+</html>
