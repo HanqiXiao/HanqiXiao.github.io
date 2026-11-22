@@ -5,17 +5,17 @@
     <title>Interject – Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <meta name="description" content="Interject is a small Claude Code mod: stop at any line of a reply and send an agent with full tool use, keep its answer for your next message, or cut and have Claude rewrite from there. Everything stays inline.">
+    <meta name="description" content="Interject is a small Claude Code mod. At any line of a reply, ask an agent with full tool use, keep its answers for next turn, or cut, and Claude rewrites future lines. Everything stays inline.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Interject: ask about any line of a Claude reply">
-    <meta property="og:description" content="Stop at any line of a Claude Code reply: send an agent with full tool use, keep its answer for your next message, or cut and rewrite from there. Everything stays inline.">
+    <meta property="og:description" content="At any line of a Claude Code reply, ask an agent with full tool use, keep its answers for next turn, or cut, and Claude rewrites future lines. Everything stays inline.">
     <meta property="og:url" content="https://hanqixiao.github.io/blog/posts/interject/interject.html">
     <meta property="og:image" content="https://hanqixiao.github.io/blog/posts/interject/social-card.jpg">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="640">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Interject: ask about any line of a Claude reply">
-    <meta name="twitter:description" content="Stop at any line of a Claude Code reply: send an agent with full tool use, keep its answer for your next message, or cut and rewrite from there.">
+    <meta name="twitter:description" content="At any line of a Claude Code reply, ask an agent with full tool use, keep its answers for next turn, or cut, and Claude rewrites future lines.">
     <meta name="twitter:image" content="https://hanqixiao.github.io/blog/posts/interject/social-card.jpg">
     <link rel="stylesheet" href="../../../stylesheet.css">
 
@@ -30,15 +30,15 @@
     <article>
       <h1>Interject</h1>
 
-      <p>Ever get lost halfway through a long Claude reply? Claude Code already has side chats and replies, but their answers float away from the line you asked about. So I built <strong>Interject</strong>, a small Claude Code mod, mostly for myself. With it, <strong>everything stays inline</strong>, at the line where you asked.</p>
+      <p>Claude wrote you 2,000 words. You're stuck on line 40. Now what? Use <strong>Interject</strong>, a small Claude Code mod I made, mostly for myself. At any line of a reply, even while Claude is still writing:</p>
 
-      <p>Stop at any line of a reply, even while Claude is still writing, and:</p>
       <ul>
-        <li><strong>Send an agent with full tool use</strong> (<em>Ask on the side</em>). It can read files, run commands and search the web, and its answer lands in a box right under the line.</li>
-        <li><strong>Keep its answer for your next message</strong>, so Claude builds on what you found out.</li>
-        <li><strong>Cut the reply</strong>, and Claude rewrites from that line, following your note.</li>
+        <li><strong>Ask an agent with full tool use</strong> (<em>Ask on the side</em>). It can read files, run commands and search the web, and its answer lands in a box right under the line.</li>
+        <li><strong>Keep its answers for next turn</strong>, so Claude builds on what you found out.</li>
+        <li><strong>Cut, and Claude rewrites future lines</strong>, following your note.</li>
       </ul>
-      <p>You can also follow up on any answer, ask nested questions inside one, and turn a side chat into its own session. Each feature is shown below.</p>
+
+      <p><strong>Everything stays inline</strong>, at the line where you asked. Claude Code already has side chats and replies, but their answers float away from that line. You can also follow up on any answer, ask nested questions inside one, and turn a side chat into its own session. Each feature is shown below.</p>
 
       <figure style="text-align:center;margin:30px 0;">
         <video src="interject-teaser.mp4" poster="interject-teaser-poster.jpg" controls playsinline preload="metadata" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></video>
