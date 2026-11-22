@@ -31,6 +31,19 @@
 
       <article style="margin-bottom:40px;">
         <h2>
+          <a href="posts/interject/interject.html" style="text-decoration:none;color:#000;">
+          <strong>Interject</strong>
+          </a>
+        </h2>
+        <p><em>Posted on November 21, 2026 by Hanqi Xiao</em></p>
+        <div class="synopsis">
+            Claude wrote you 2,000 words. You're stuck on line 40. Now what? Interject is a small Claude Code mod that I made. At any line of a reply, ask an agent with full tool use, keep its answers for next turn, or cut, and Claude rewrites future lines. Everything stays inline.
+        </div>
+        <p><a href="posts/interject/interject.html">Read more →</a></p>
+      </article>
+
+      <article style="margin-bottom:40px;">
+        <h2>
           <a href="posts/lifetrace/lifetrace.html" style="text-decoration:none;color:#000;">
           <strong>LifeTrace</strong>
           </a>
@@ -75,6 +88,7 @@
     // Auto-load synopsis from each linked post
     document.querySelectorAll('.synopsis').forEach(async el => {
       const src = el.getAttribute('data-src');
+      if (!src) return;  // a post with a written summary keeps it
       try {
         const res = await fetch(src);
         const html = await res.text();
